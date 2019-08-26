@@ -132,7 +132,7 @@ mergePairs <- function(dadaF, derepF, dadaR, derepR, minOverlap = 12, maxMismatc
         Runqseq <- rc(unname(as.character(dadaR[[i]]$clustering$sequence[ups$reverse])))
         if (justConcatenate == TRUE) {
           # Simply concatenate the sequences together
-            ups$sequence <- mapply(function(x,y) paste0(x,"NNNNNNNNNN", y),
+            ups$sequence <- mapply(function(x,y) paste0(x, rep("N", 250), y),
                                    Funqseq, Runqseq, SIMPLIFY=FALSE);  
             ups$nmatch <- 0
             ups$nmismatch <- 0
