@@ -87,7 +87,7 @@
 #' merger <- mergePairs(dadaF, derepF, dadaR, derepR, returnRejects=TRUE, propagateCol=c("n0", "birth_ham"))
 #' merger <- mergePairs(dadaF, derepF, dadaR, derepR, justConcatenate=TRUE)
 #' 
-mergePairs <- function(dadaF, derepF, dadaR, derepR, minOverlap = 12, maxMismatch=0, returnRejects=FALSE, propagateCol=character(0), justConcatenate=FALSE, trimOverhang=FALSE, verbose=FALSE, ...) {
+mergePairs <- function(dadaF, derepF, dadaR, derepR, minOverlap = 12, maxMismatch=0, returnRejects=FALSE, propagateCol=character(0), justConcatenate=TRUE, trimOverhang=FALSE, verbose=FALSE, ...) {
   if(is(dadaF, "dada")) dadaF <- list(dadaF)
   if(is(derepF, "derep")) derepF <- list(derepF)
   if(is(dadaR, "dada")) dadaR <- list(dadaR)
